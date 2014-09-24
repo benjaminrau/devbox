@@ -1,0 +1,13 @@
+user_home_base: /home
+user: wwwdev
+group: wwwdev
+domain: dev.local
+nginx_configfile: vhost.conf
+nginx_home_subfolder: /web
+nginx_directoryindex: index.php
+mysql_root_password: vagrant
+database_name: dev_typo3
+nginx_domain_aliases:
+git_username: Benjamin Rau
+git_email: rau@codearts.at
+ssh_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0TCnsy9rkVJ7TOZaaiJ3qrkmUFOA1e0jmG7x+889coXe2PGmZ2KXtot4mqiu/Ka0ubvfJjVHS73wSn4S7VnLbLlv6/3Zn7RBQFa9WWZVZ5KBzMxL9Na8uKa4NXgWQrPcZh2gPL8jt5VDerIJgGP54tbOw235/b5qz/Tdit0adWyzMAADhH4YdOB/0nCaG3fUeg/tNqHBmGTXiuv4w6Py0DCIcnA5HtPkRPH2VL/Xp8jTdKR+bMcQ6hYv0D8JbHfMtNGhseq9ZkT+uxYPlbtKEsmmjNWCk+3HGxP1/NbzMh4wZzKOi2/6E9gPemhuJv88uV+pE+d8YdAoCD3KIoMJR

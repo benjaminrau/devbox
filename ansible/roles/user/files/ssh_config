@@ -1,0 +1,8 @@
+# general ###
+ForwardAgent yes
+
+# specific ###
+#Host customhostname
+    #Hostname officialhostname
+    #User yourusername
+    #IdentityFile ~/.ssh/project.key

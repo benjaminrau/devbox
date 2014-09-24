@@ -1,0 +1,23 @@
+- name: install packages
+  action: apt pkg={{item}} state=latest
+  with_items:
+    - nginx
+    - nginx-full
+    - nginx-common
+
+- name: create phpmyadmin config from template
+  template: src=../templates/{{item.path}} dest=/etc/nginx/sites-enabled/{{item.dest}} mode={{item.mode}}
+  with_items:
+    - { path: 'phpmyadmin.conf', dest: 'phpmyadmin.conf', mode: 644 }
+  tags:
+    - templates
+
+- name: create vhost config from template
+  template: src=../templates/{{item.path}} dest=/etc/nginx/sites-enabled/{{item.dest}} mode={{item.mode}}
+  with_items:
+    - { path: '{{nginx_configfile}}', dest: '{{nginx_domain}}.conf', mode: 644 }
+  tags:
+    - templates
+
+- name: start server
+  service: name=nginx state=started enabled=true

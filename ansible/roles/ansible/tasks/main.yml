@@ -1,0 +1,5 @@
+- name: install pip
+  action: command /usr/bin/easy_install pip
+
+- name: install ansible with pip
+  action: command /usr/bin/pip install ansible

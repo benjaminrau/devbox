@@ -1,0 +1,3 @@
+nginx_domain: "{{domain}}"
+nginx_home: "{{user_home_base}}/{{user}}/htdocs{{nginx_home_subfolder}}"
+nginx_fcgi: 9000
