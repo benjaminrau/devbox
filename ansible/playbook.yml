@@ -17,6 +17,7 @@
     - tools
     - ansible
     - bootstrap-webproject
+    - cleanup
 
   vars_files:
     - "global_vars/devbox.yml"
