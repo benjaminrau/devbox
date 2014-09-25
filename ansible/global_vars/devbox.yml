@@ -3,7 +3,6 @@ user: wwwdev
 group: wwwdev
 domain: dev.local
 nginx_configfile: vhost.conf
-nginx_home_subfolder: /web
 nginx_directoryindex: index.php
 mysql_root_password: vagrant
 nginx_domain_aliases:

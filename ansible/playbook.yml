@@ -16,7 +16,7 @@
     - db
     - tools
     - ansible
-    - typo3-bootstrap
+    - bootstrap-webproject
 
   vars_files:
     - "global_vars/devbox.yml"

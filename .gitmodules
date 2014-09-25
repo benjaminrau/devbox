@@ -1,8 +1,0 @@
-[submodule "data/TYPO3.CMS"]
-	path = data/TYPO3.CMS
-	url = https://github.com/TYPO3/TYPO3.CMS.git
-	branch = TYPO3_6-2
-[submodule "data/web"]
-	path = data/web
-	url = https://github.com/benjaminrau/typo3-bootstrap.git
-	branch = master

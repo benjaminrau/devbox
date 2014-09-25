@@ -21,6 +21,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |vconfig|
         config.vm.host_name = "t3devbox"
         config.vm.network :private_network, ip: "192.168.56.11"
 
+		config.vm.provision :shell do |shell|
+		 	shell.path = "bootstrap_webproject.sh"
+		 	shell.args = "'https://github.com/benjaminrau/typo3-bootstrap.git'"
+		end
+
         config.vm.provision :ansible do |ansible|
             ansible.playbook = "ansible/playbook.yml"
             ansible.inventory_path = "ansible/hosts"
