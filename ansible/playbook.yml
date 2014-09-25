@@ -6,6 +6,12 @@
 # to operate on.
 - hosts: t3devbox
   sudo: True
+
+  vars_prompt:
+      - name: bootstrap_webproject
+        prompt: "Bootstrap webproject? Y/n"
+        default: "Y"
+
   # Looks for roles/{role}/tasks/main.yml for tasks, roles/{role}/handlers/main.yml
   # for handlers, etcetera.
   roles:
@@ -16,7 +22,7 @@
     - db
     - tools
     - ansible
-    - bootstrap-webproject
+    - { role: bootstrap-webproject, when: bootstrap_webproject == "Y" or bootstrap_webproject == "y" }
     - cleanup
 
   vars_files:
