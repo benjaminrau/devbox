@@ -6,7 +6,6 @@ nginx_configfile: vhost.conf
 nginx_home_subfolder: /web
 nginx_directoryindex: index.php
 mysql_root_password: vagrant
-database_name: dev_typo3
 nginx_domain_aliases:
 git_username: Benjamin Rau
 git_email: rau@codearts.at
