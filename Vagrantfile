@@ -1,6 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Define the webproject to bootstrap with ansible
+BOOTSTRAP_WEBPROJECT_PLAYBOOK = "#{File.dirname(__FILE__)}/data/web/ansible/playbook.yml"
+BOOTSTRAP_WEBPROJECT_REPOSITORY = "https://github.com/benjaminrau/typo3-bootstrap.git"
+
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
@@ -23,12 +27,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |vconfig|
 
 		config.vm.provision :shell do |shell|
 		 	shell.path = "bootstrap_webproject.sh"
-		 	shell.args = "'https://github.com/benjaminrau/typo3-bootstrap.git'"
+		 	shell.args = "'#{BOOTSTRAP_WEBPROJECT_PLAYBOOK}' '#{BOOTSTRAP_WEBPROJECT_REPOSITORY}'"
 		end
 
         config.vm.provision :ansible do |ansible|
             ansible.playbook = "ansible/playbook.yml"
             ansible.inventory_path = "ansible/hosts"
+            ansible.extra_vars = {bootstrap_webproject_playbook: BOOTSTRAP_WEBPROJECT_PLAYBOOK}
         end
     end
 

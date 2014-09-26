@@ -1,2 +1,0 @@
-- name: we changed a lot of files and permissions so lets restart php-fpm server
-  service: name=php5-fpm state=restarted enabled=true
