@@ -47,7 +47,7 @@ Then go to a directory of your choice where you want to place the ansible instal
 Now go to the parent directory where you want your virtual machine to be placed and clone the repo
 Clone with --recursive to auto-init all submodules and enjoy the flow...
 
-    git clone --recursive https://bitbucket.org/BenjaminRau/devbox.git devbox
+    git clone https://github.com/benjaminrau/devbox.git devbox
 
 If you want to use other submodules you will have to clone without --recursive and after you modifies .gitmodules run
 
